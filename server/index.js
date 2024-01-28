@@ -60,8 +60,6 @@ app.use("/api/posts", postRoute);
 app.use("/api/conversations", conversationRoute);
 app.use("/api/messages", messageRoute);
 
-app.use(express.static(path.join(__dirname, "build")));
-
 app.listen(process.env.PORT || 5000, ()=>{
     console.log("Server is running!")
 });
