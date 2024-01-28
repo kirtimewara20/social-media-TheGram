@@ -1,9 +1,8 @@
 import "./login.css"
-import {Instagram, Facebook, Twitter} from "@mui/icons-material"
+import {Instagram, Facebook, Twitter,CircularProgress} from "@mui/icons-material"
 import {useContext, useRef} from "react"
 import { loginCall } from "../../apiCalls";
 import { AuthContext } from "../../context/AuthContext";
-import {CircularProgress} from "@material-ui/core"
 import {Link } from "react-router-dom"
 
 export default function Login() {
