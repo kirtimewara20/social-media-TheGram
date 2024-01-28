@@ -18,7 +18,7 @@ export default function Rightbar(){
 
     // Connect to Socket.io
   useEffect(() => {
-    socket.current = io('http://localhost:8800')
+    socket.current = io('https://social-media-socket-pr5c.onrender.com')
     socket.current.emit("new-user-add", user._id)
     socket.current.on("get-users", (users) => {
         setOnlineUsers(users);
