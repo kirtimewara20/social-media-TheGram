@@ -1,12 +1,11 @@
 import "./profileLeftbar.css"
-import {Explore, SlowMotionVideoOutlined, Group,BookmarkBorder,StarOutline, AddBox,Event,Collections, Chat} from "@mui/icons-material";
+import {Explore, SlowMotionVideoOutlined, Group,BookmarkBorder,StarOutline, AddBox,Event,Collections, Chat,Autorenew} from "@mui/icons-material";
 import { useEffect, useState, useContext } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import {AuthContext} from "../../context/AuthContext";
 import { logoutCall } from "../../apiCalls";
 import {useNavigate} from "react-router-dom";
-import {CircularProgress} from "@material-ui/core"
 
 export default function ProfileLeftbar(){
     const PF = process.env.REACT_APP_PUBLIC_FOLDER; 
@@ -77,7 +76,7 @@ useEffect(() => {
                 </ul>
                 <div className="leftbarBtns">
                     <button className="leftbarButton"> Show More </button>
-                    <button className="leftbarButton" onClick={handleLogout}>{isFetching ? (<CircularProgress/>) : ("Logout")} </button>
+                    <button className="leftbarButton" onClick={handleLogout}>{isFetching ? (<Autorenew/>) : ("Logout")} </button>
                 </div>
                 <hr className="leftbarHr"/>
                 <h3>Following</h3>

@@ -1,5 +1,5 @@
 import "./login.css"
-import {Instagram, Facebook, Twitter,CircularProgress} from "@mui/icons-material"
+import {Instagram, Facebook, Twitter, Autorenew} from "@mui/icons-material"
 import {useContext, useRef} from "react"
 import { loginCall } from "../../apiCalls";
 import { AuthContext } from "../../context/AuthContext";
@@ -43,7 +43,7 @@ export default function Login() {
                             <Link to={"/forgot/password"} style={{textDecoration:"none"}}><span>Forgot Password</span></Link>
                         </div>
                         <div className="inputBx">
-                            {isFetching ? (<CircularProgress/>) : 
+                            {isFetching ? (<Autorenew/>) : 
                                 (<input type="submit" value="Sign in" />)
                             }
                         </div>
