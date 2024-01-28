@@ -1,0 +1,213 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.card{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url('../../../public/assets/LoginBg.jpg');
+    background-size: 100%;
+    background-position: center;
+    background-blend-mode: lighten;
+    display: flex;
+    align-items: center;
+    padding: 40px 90px 0;
+}
+
+.left{
+    flex: 1;
+}
+
+.left h1{
+    font-size: 4rem;
+    letter-spacing: .03em;
+    color: #fff;
+}
+
+.left p{
+    margin: 15px 0 40px;
+    color: #fff;
+    font-weight: 500;
+}
+
+.left .button{
+    color: #fff;
+    text-decoration: none;
+    border: 2px solid #fff;
+    font-weight: 500;
+    padding: 10px 40px;
+    border-radius: 40px;
+    cursor: pointer;
+    background-color: #B6BBC4;
+}
+
+.left a:hover{
+    background-color: #95a8ca;
+}
+
+.loginImg{
+    position: absolute;
+    top:0;
+    left:0;
+    width:50%;
+    height:100%;
+    object-fit: cover; 
+}
+
+.right{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+
+.formBx{
+    width: 50%;
+}
+
+.formBx h2{
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    border-bottom: 4px solid #fff;
+    display: inline-block;
+    letter-spacing: 1px;
+}
+
+.formBx .inputBx{
+    margin-bottom: 20px;
+}
+
+.formBx .inputBx span{
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: inline-block;
+    color: #fff;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.formBx .inputBx input{
+    width:100%;
+    padding: 10px 20px;
+    outline: none;
+    font-weight:  400;
+    border: 1px solid #fff;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #fff;
+    background: transparent;
+    border-radius: 30px;
+}
+
+.formBx .inputBx input[type="submit"]{
+    background-color: #B6BBC4;
+    color: #fff;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.formBx .inputBx input[type="submit"]:hover{
+    background-color: #95a8ca;
+}
+
+.remember {
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember label input{
+    margin-bottom: 10px;
+    color:#fff;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.remember span{
+    margin-bottom: 10px;
+    color:#fff;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.formBx .inputBx p{
+    color:#fff;
+}
+
+.formBx .inputBx p a{
+    color:#31304D;
+    font-weight: 500;
+}
+
+.formBx h3{
+    color: #fff;
+    text-align: center;
+    margin: 80px 0 10px;
+}
+
+.socialLogin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.apps{
+    width: 50px !important;
+    height: 50px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 7px;
+    cursor: pointer;
+}
+
+.apps:hover{
+    color: #edeff1;
+    cursor: pointer;
+}
+
+@media ( max-width : 768px)
+{
+    .loginImg{
+        position: absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        object-fit: cover; 
+    }
+    .right{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+    .formBx{
+        width: 100%;
+        padding: 40px;
+        background-color: rgp(255 255 255 / 0.9);
+        margin: 50px;
+    }
+    .formBx h3{
+        color: #607d8b;
+        text-align: center;
+        margin: 30px 0 10px;
+        font-weight: 500;
+    }
+
+}
+
+
+
+

@@ -1,0 +1,80 @@
+.editProfileForm{
+    padding: 20px 40px 0;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+.editProfileForm h2{
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: .03em;;
+    color: #555;
+    border-bottom: 4px solid #aaa;
+    display: inline-block;
+    letter-spacing: 1px;
+}
+
+.profilepictureImg{
+    width: 77px;
+    height: 77px;
+    border-radius: 40px;
+    object-fit: cover;
+}
+
+.editProfileForm .formInputs1{
+    margin-bottom: 20px;
+    margin-left: 120px;
+}
+
+.editProfileForm .formInputs{
+    margin-bottom: 20px;
+}
+
+.editProfileForm .formInputs span{
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: inline-block;
+    color: black;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.editProfileForm .formInputs input{
+    width:100%;
+    padding: 10px 20px;
+    outline: none;
+    font-weight:  400;
+    border: 1px solid #aaa;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #aaa;
+    background: transparent;
+    border-radius: 30px;
+}
+
+.editProfileForm .UpdateBtn{
+    width:100%;
+    height: 2rem;
+    align-self: flex-end;
+    padding: 7px;
+    border: none;
+    background-color: #717c92;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    align-items: center;
+    border-radius: 30px;
+    font-weight: 500;
+    outline: none;
+}
+
+.editProfileForm .UpdateBtn:hover{
+    background-color: #31304D;
+}
+
+

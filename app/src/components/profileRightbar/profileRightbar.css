@@ -1,0 +1,115 @@
+.rightbar{
+    flex: 3.5;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.rightbarWrapper{
+    padding:10px 10px 0 0;
+    margin: 20px;
+    width: 90%;
+    height:490px;
+    border-radius: 10px;
+    margin-top: 0px;
+    -webkit-box-shadow: 0px 0px 16px -8px rgba(0,0,0,0.68);
+    box-shadow: 0px 0px 16px -8px rgba(0,0,0,0.68);
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.rightbarTopText{
+    margin-left: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h3{
+    margin: 10px;
+}
+
+.ManageText{
+    color: #aaa;
+    margin: 10px;
+}
+
+/* Follow Request Container */
+.FollowRequestItems {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Follow Request User */
+.followRequestUser {
+    display: flex;
+    align-items: center;
+    background-color: #f8f8f8;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+}
+
+.FriendsImg {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.followRequestUsername {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Follow Request Buttons */
+.FollowRequestBtn {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.Btn, .Btn1 {
+    cursor: pointer;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    width: 40%;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.Btn {
+    background-color: #31304D;
+    color: white;
+}
+
+.Btn1 {
+    background-color: #424769;
+    color: white;
+}
+
+.Btn:hover, .Btn1:hover {
+    filter: brightness(1.2);
+}
+
+.rightbarText{
+    margin-left: 22px;
+    align-items: center;
+    font-weight: 500;
+}
+
+.rightbarSuggestedList{
+    padding:0;
+    margin:10px;
+    list-style: none;
+    border-radius: 8px;
+    background-color: #f8f8f8;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+

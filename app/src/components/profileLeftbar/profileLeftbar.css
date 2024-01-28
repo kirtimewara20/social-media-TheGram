@@ -1,0 +1,114 @@
+.leftbar{
+    flex: 2.2;
+    height: calc(100vh - 50px);
+    overflow-y: scroll;
+    position: sticky;
+    top: 50px;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(179, 179, 179);
+}
+
+.leftbarWrapper{
+    padding: 20px;
+}
+
+.leftbarList{
+    padding:0;
+    margin: 0;
+    list-style: none;
+}
+
+.leftbarListItem{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.leftbarIcon{
+    margin-right: 15px;
+    color: #31304D;
+}
+
+.leftbarBtns{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+    @media screen and (max-width: 1200px) {
+        flex-direction: column;
+    }
+}
+
+.leftbarButton{
+    border-radius: 5px;
+    color: #f1f1f1;
+    background-color: #31304D;
+    cursor: pointer;
+    padding: 8px 12px;
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+    width: 50%;
+    transition: background-color 0.3s, color 0.3s;
+
+    @media screen and (max-width: 1200px) {
+        width: 80%;
+    }
+}
+
+.leftbarButton:hover{
+    filter: brightness(1.2);
+}
+
+.CircularProgress{
+    font-size: 14px;
+    align-items: center;
+}
+
+.leftbarHr{
+    margin: 20px 0;
+}
+
+h3{
+    margin: 10px 0;
+    margin-left: 30px;
+}
+
+.leftbarFriendList{
+    padding:0;
+    margin:0;
+    list-style: none;
+}
+
+.leftbarFollowings{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #f8f8f8;
+  }
+  
+  .leftbarFollowing{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+  
+  .leftbarFollowingImg{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+  }

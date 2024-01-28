@@ -1,0 +1,158 @@
+.rightbar{
+    flex: 3.5;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.rightbarWrapper{
+    padding:10px 10px 0 0;
+    margin: 10px;
+    width: 90%;
+    height:490px;
+    border-radius: 10px;
+    margin-top: 0px;
+    -webkit-box-shadow: 0px 0px 16px -8px rgba(0,0,0,0.68);
+    box-shadow: 0px 0px 16px -8px rgba(0,0,0,0.68);
+}
+
+.rightbarTopText{
+    margin-left: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h3{
+    margin: 10px 0;
+    margin-left: 30px;
+}
+
+
+.createAdText{
+    color: #aaa;
+    margin: 10px;
+}
+
+.rightbarImg{
+    width: 95%;
+    height: 35vh;
+    border-radius: 15px;
+    margin:20px;
+}
+
+.rightbarText{
+    margin-left: 22px;
+    align-items: center;
+    font-weight: 500;
+}
+
+.rightbarSuggestedList{
+    padding:0;
+    margin:0;
+    list-style: none;
+}
+
+/* =========== message ============== */
+
+.heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.85rem;
+    margin-left: 10px;
+}
+
+.search-bar{
+    width:90%;
+    height:40px;
+    background-color: lightgray;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    margin-left: 30px;
+}
+
+
+.search-Icon{
+    font-size: 20px !important;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.search-Input{
+    border: none;
+    width: 70%;
+    height: 25px;
+    border-radius: 15px;
+    text-align: start;
+    background-color: lightgray;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.search-Input:focus{
+    outline: none;
+}
+
+.category{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    margin: 10px;
+}
+
+.category h6{
+    width: 100%;
+    text-align: center;
+    border-bottom: 3px solid grey;
+    padding-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.active{
+    border-bottom: 4px solid black;
+}
+
+.message {
+    display: flex;
+    gap:1rem;
+    margin-bottom: 1rem;
+}
+
+.message:last-child{
+    margin:15px;
+}
+
+.message p{
+    font-size: 0.82rem;
+    margin-top: 0.2rem;
+}
+
+.profile-photo{
+    position: relative;
+    overflow: visible;
+}
+
+.profile-photo img{
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+}
+
+.message-body h5{
+    font-size: 16px;
+}
+
+
+
+
+
+
+
+
+
+
+

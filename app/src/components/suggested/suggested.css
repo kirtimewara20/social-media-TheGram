@@ -1,0 +1,43 @@
+.rightbarSuggested{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.rightbarSuggestedItems{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    justify-content: space-between;
+}
+
+.rightbarSuggestedImg{
+    width: 45px;   
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.rightbarSuggestedName{
+    font-weight: 500;
+}
+
+.followBtn{
+    border: none;
+    padding:7px;
+    width: 110px;
+    border-radius: 5px;
+    background-color: #31304D;
+    font-weight: 500;
+    cursor: pointer;
+    color: white;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.followBtn:hover{
+    filter: brightness(1.2);
+}
