@@ -1,5 +1,5 @@
 import "./topbar.css"
-import { Search, Home, Timeline, Person, Chat, Notifications } from "@material-ui/icons";
+import { Search, Home, Timeline, Person, Chat, Notifications } from "@mui/icons-material";
 import { Link } from "react-router-dom";
 import {AuthContext} from "../../context/AuthContext";
 import { useContext } from "react";

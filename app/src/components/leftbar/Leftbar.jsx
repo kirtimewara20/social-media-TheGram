@@ -1,5 +1,5 @@
 import "./leftbar.css"
-import {Explore, SlowMotionVideoOutlined, Group, BookmarkBorder, StarOutline, AddBox, Event, Collections, Chat} from "@material-ui/icons";
+import {Explore, SlowMotionVideoOutlined, Group, BookmarkBorder, StarOutline, AddBox, Event, Collections, Chat} from "@mui/icons-material";
 import Friends from "../friends/Friends";
 import { useContext, useEffect, useState } from "react";
 import axios from "axios";

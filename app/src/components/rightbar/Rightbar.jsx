@@ -1,6 +1,6 @@
 import "./rightbar.css"
 //import { Users } from "../../dummyData";
-import {Search} from "@material-ui/icons"
+import {Search} from "@mui/icons-material"
 import { useState, useEffect,useContext,useRef } from "react";
 import axios from "axios"
 import {AuthContext} from "../../context/AuthContext";

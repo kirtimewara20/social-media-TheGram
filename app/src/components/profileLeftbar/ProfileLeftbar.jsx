@@ -1,5 +1,5 @@
 import "./profileLeftbar.css"
-import {Explore, SlowMotionVideoOutlined, Group,BookmarkBorder,StarOutline, AddBox,Event,Collections, Chat} from "@material-ui/icons";
+import {Explore, SlowMotionVideoOutlined, Group,BookmarkBorder,StarOutline, AddBox,Event,Collections, Chat} from "@mui/icons-material";
 import { useEffect, useState, useContext } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";

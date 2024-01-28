@@ -1,5 +1,5 @@
 import "./register.css"
-import {Instagram, Facebook, Twitter} from "@material-ui/icons"
+import {Instagram, Facebook, Twitter} from "@mui/icons-material"
 import axios from "axios";
 import { useRef } from "react";
 import {useNavigate} from "react-router-dom";

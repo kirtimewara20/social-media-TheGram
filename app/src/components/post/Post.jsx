@@ -1,5 +1,5 @@
 import "./post.css"
-import{Delete, FavoriteBorder, Comment, Share, BookmarkBorder, Favorite} from "@material-ui/icons"
+import{Delete, FavoriteBorder, Comment, Share, BookmarkBorder, Favorite} from "@mui/icons-material"
 import axios from "axios";
 import { useState, useEffect, useContext } from "react";
 import moment from 'moment';

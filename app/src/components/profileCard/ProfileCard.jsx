@@ -1,5 +1,5 @@
 import "./profileCard.css"
-import {Edit} from "@material-ui/icons"
+import {Edit} from "@mui/icons-material"
 import {useState,useEffect,useContext } from  "react"
 import ProfileModal from "../profileModel/ProfileModel";
 import axios from "axios";
