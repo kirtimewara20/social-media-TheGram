@@ -1,6 +1,6 @@
 const io = require("socket.io")(process.env.PORT || 8800,{
     cors:{
-        origin:"http://localhost:3000",
+        origin:["http://localhost:3000", "https://frontend-27lh.onrender.com"]
     },
 });
 
