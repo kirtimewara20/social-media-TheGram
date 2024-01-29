@@ -56,5 +56,8 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://social-media-backend-75bp.onrender.com/api"
+  "proxy": "https://social-media-backend-75bp.onrender.com/api",
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
+  }
 }
