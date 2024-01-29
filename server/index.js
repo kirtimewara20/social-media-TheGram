@@ -31,7 +31,7 @@ app.use(express.json())
 app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
 app.use(morgan("common"));
 app.use(cors({
-    origin:"http://localhost:3000",
+    origin:["http://localhost:3000", "https://frontend-27lh.onrender.com"]
 }));
 
 //MULTER FOR FILE UPLOAD
