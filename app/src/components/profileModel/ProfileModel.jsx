@@ -3,6 +3,7 @@ import { Modal, useMantineTheme } from '@mantine/core';
 import {AuthContext} from "../../context/AuthContext";
 import {useContext, useState } from  "react";
 import axios from "axios";
+import {API_URL} from "../../config"
 
 export default function ProfileModal({modalOpened, setModalOpened, data}) {
   const PF = process.env.REACT_APP_PUBLIC_FOLDER;
@@ -37,16 +38,16 @@ export default function ProfileModal({modalOpened, setModalOpened, data}) {
       updatedUser.profilePicture = fileName;
 
        try {
-            await axios.post("/upload", data);
+            await axios.post(`${API_URL}/upload`, data);
         } catch (err) {
             console.log(err);
         }
     }
     try {
-      const res = await axios.put("/users/" + user._id, updatedUser);
+      const res = await axios.put(`${API_URL}/users/` + user._id, updatedUser);
       setSuccess(true);
       dispatch({ type: "UPDATE_SUCCESS", payload: res.data });
-      window.location.replace(`/profile/${user.name}`);
+      window.location.replace(`${API_URL}/profile/${user.name}`);
     } catch (err) {
       dispatch({ type: "UPDATE_FAILURE" });
     }

@@ -3,6 +3,7 @@ import {useContext, useState} from "react"
 import {AuthContext} from "../../context/AuthContext";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import {API_URL} from "../../config"
 
 export default function Suggested({user}) {
   const { user: currentUser, dispatch} = useContext(AuthContext);
@@ -12,10 +13,10 @@ export default function Suggested({user}) {
   const handleFollow = async () => {
     try {
       if (followed) {
-        await axios.put(`/users/${user._id}/unfollow`, {userId: currentUser?._id}, );
+        await axios.put(`${API_URL}/users/${user._id}/unfollow`, {userId: currentUser?._id}, );
         dispatch({type: "UNFOLLOW", payload: user._id });
       } else {
-        await axios.put(`/users/${user._id}/follow`, {userId: currentUser?._id});
+        await axios.put(`${API_URL}/users/${user._id}/follow`, {userId: currentUser?._id});
         dispatch({type: "FOLLOW", payload: user._id})
       }
       setFollowed(!followed);

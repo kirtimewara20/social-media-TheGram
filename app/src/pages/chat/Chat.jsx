@@ -6,6 +6,7 @@ import {useRef, useContext, useState, useEffect } from "react";
 import { AuthContext } from "../../context/AuthContext";
 import axios from "axios";
 import {io} from 'socket.io-client';
+import {API_URL} from "../../config"
 
 export default function Chat() {
   const [chats, setChats] = useState([]);
@@ -46,7 +47,7 @@ export default function Chat() {
   useEffect(()=> {
     const getChats = async () => {
         try {
-            const res = await axios.get("/conversations/" + user._id);
+            const res = await axios.get(`${API_URL}/conversations/` + user._id);
             setChats(res.data);
         } catch (err) {
             console.log(err);

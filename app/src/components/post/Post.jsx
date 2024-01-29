@@ -5,6 +5,7 @@ import { useState, useEffect, useContext } from "react";
 import moment from 'moment';
 import {Link } from "react-router-dom"
 import {AuthContext} from "../../context/AuthContext"
+import {API_URL} from "../../config"
 
 export default function Post({ post}) {
     const [like, setLike] = useState(post.likes.length);
@@ -23,7 +24,7 @@ export default function Post({ post}) {
     useEffect(() => {
         const fetchUser = async () => {
             try {
-                const res = await axios.get(`/users?userId=${post.userId}`);
+                const res = await axios.get(`${API_URL}/users?userId=${post.userId}`);
                 setUser(res.data);
             } catch(err){
                 console.error('Error fetching user:', err);
@@ -35,7 +36,7 @@ export default function Post({ post}) {
     useEffect(() => {
         const fetchComments = async () => {
           try {
-            const response = await axios.get(`/posts/${post?._id}/comments`);
+            const response = await axios.get(`${API_URL}/posts/${post?._id}/comments`);
             setComments(response.data.comments);
           } catch (err) {
             console.error('Error fetching comments:', err);
@@ -46,7 +47,7 @@ export default function Post({ post}) {
 
     const likeHandler = () => {
         try{
-            axios.put("/posts/"+post?._id+"/like", {userId: currentUser?._id})
+            axios.put(`${API_URL}/posts/${post?._id}/like`, {userId: currentUser?._id})
         } catch(err) {}
         setLike(isLiked ? like - 1 : like + 1);
         setIsLiked(!isLiked);
@@ -60,7 +61,7 @@ export default function Post({ post}) {
             "comment": `${commentText}`
         }
         try{
-            axios.post(`/posts/${post?._id}/comment`, comment);
+            axios.post(`${API_URL}/posts/${post?._id}/comment`, comment);
             setComments(Comments.concat(comment));
         } catch(err) {
             console.error("Error adding comment:", err);
@@ -82,7 +83,7 @@ export default function Post({ post}) {
 
     const handleDelete = async () => {
         try {
-          await axios.delete(`/posts/${post._id}`, {
+          await axios.delete(`${API_URL}/posts/${post._id}`, {
             data: { userId: user._id },
           });
           window.location.replace("/");

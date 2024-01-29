@@ -4,6 +4,7 @@ import Friends from "../friends/Friends";
 import { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import {AuthContext} from "../../context/AuthContext";
+import {API_URL} from "../../config"
 
 export default function Leftbar(){
     const [friends, setFriends] = useState([]);
@@ -13,7 +14,7 @@ export default function Leftbar(){
 useEffect(() => {
     const getFriends =  async () => {
         try {
-            const friendList = await axios.get("/users/friends/" + user._id);
+            const friendList = await axios.get(`${API_URL}/users/friends/` + user._id);
             setFriends(friendList.data);
         } catch(err) {
             console.log(err);
@@ -25,7 +26,7 @@ useEffect(() => {
     //create chats 
     const createChats = async (receiverId) => {
         try {
-            const res = await axios.post("/conversations", {
+            const res = await axios.post(`${API_URL}/conversations`, {
                 senderId: user._id,
                 receiverId: receiverId,
             });

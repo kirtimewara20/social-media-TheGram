@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import {AuthContext} from "../../context/AuthContext";
 import { logoutCall } from "../../apiCalls";
 import {useNavigate} from "react-router-dom";
+import {API_URL} from "../../config"
 
 export default function ProfileLeftbar(){
     const PF = process.env.REACT_APP_PUBLIC_FOLDER; 
@@ -24,7 +25,7 @@ export default function ProfileLeftbar(){
 useEffect(() => {
     const getFriends =  async () => {
         try {
-            const friendList = await axios.get("/users/friends/" + user._id );
+            const friendList = await axios.get(`${API_URL}/users/friends/` + user._id );
             setFriends(friendList.data);
         } catch(err) {
             console.log(err);

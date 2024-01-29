@@ -7,6 +7,7 @@ import {AuthContext} from "../../context/AuthContext";
 import Conversation from "../../components/conversations/Conversation";
 import {Link} from "react-router-dom"
 import {io} from 'socket.io-client';
+import {API_URL} from "../../config"
 
 export default function Rightbar(){
     const PF = process.env.REACT_APP_PUBLIC_FOLDER;
@@ -29,7 +30,7 @@ export default function Rightbar(){
   useEffect(()=> {
     const getChats = async () => {
         try {
-            const res = await axios.get("/conversations/" + user?._id);
+            const res = await axios.get(`${API_URL}/conversations/` + user?._id);
             setChats(res.data);
         } catch (err) {
             console.log(err);
@@ -48,7 +49,7 @@ export default function Rightbar(){
 
   const searchHandle = async(event) => {
     let key = event.target.value;
-    let result = await fetch(`http://localhost:5000/api/users/search/${key}` )
+    let result = await fetch(`${API_URL}/users/search/${key}` )
         result = await result.json();
         if (result) {
             setCurrentChat(result);

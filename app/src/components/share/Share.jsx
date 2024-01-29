@@ -3,6 +3,7 @@ import {PermMedia, Label,Room, EmojiEmotions, Cancel} from "@mui/icons-material"
 import {AuthContext} from "../../context/AuthContext";
 import {useContext, useRef, useState} from "react";
 import axios from "axios";
+import {API_URL} from "../../config"
 
 export default function Share() {
   const PF = process.env.REACT_APP_PUBLIC_FOLDER;
@@ -28,13 +29,13 @@ export default function Share() {
         console.log(newPost);
 
         try {
-            await axios.post("/upload", data);
+            await axios.post(`${API_URL}/upload`, data);
         } catch (err) {
             console.log(err);
         }
     }
     try {
-        await axios.post("/posts", newPost);
+        await axios.post(`${API_URL}/posts`, newPost);
         window.location.reload();
     } catch (err) {
         console.log(err);

@@ -4,6 +4,7 @@ import Suggested from "../suggested/Suggested";
 import { useContext, useState, useEffect } from "react";
 import axios from "axios";
 import {AuthContext} from "../../context/AuthContext";
+import {API_URL} from "../../config"
 
 export default function ProfileRightbar(){
     const PF = process.env.REACT_APP_PUBLIC_FOLDER;
@@ -13,7 +14,7 @@ export default function ProfileRightbar(){
     useEffect(() => {
         const fetchUser = async () => {
             try {
-                const res = await axios.get("/users/suggested/user/" + user?._id);
+                const res = await axios.get(`${API_URL}/users/suggested/user/` + user?._id);
                 setUsers(res.data);
             } catch(err){
                 console.error('Error fetching user:', err);

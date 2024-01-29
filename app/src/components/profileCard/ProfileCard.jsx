@@ -5,6 +5,7 @@ import ProfileModal from "../profileModel/ProfileModel";
 import axios from "axios";
 import { useParams } from "react-router";
 import {AuthContext} from "../../context/AuthContext";
+import {API_URL} from "../../config"
 
 export default function ProfileCard({posts}) {
 
@@ -21,7 +22,7 @@ export default function ProfileCard({posts}) {
         setUser(user)
       } else {
             try {
-              const res = await axios.get(`/users?name=${name}`);
+              const res = await axios.get(`${API_URL}/users?name=${name}`);
               setUser(res.data);
           } catch(err){
               console.log('Error fetching user:', err);
@@ -34,10 +35,10 @@ export default function ProfileCard({posts}) {
   const handleFollow = async () => {
     try {
         if (followed) {
-          await axios.put(`/users/${user._id}/unfollow`, {userId: currentUser?._id}, );
+          await axios.put(`${API_URL}/users/${user._id}/unfollow`, {userId: currentUser?._id}, );
           dispatch({type: "UNFOLLOW", payload: user._id });
         } else {
-          await axios.put(`/users/${user._id}/follow`, {userId: currentUser?._id});
+          await axios.put(`${API_URL}/users/${user._id}/follow`, {userId: currentUser?._id});
           dispatch({type: "FOLLOW", payload: user._id});    
         }
         setFollowed(!followed);

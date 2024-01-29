@@ -1,0 +1,1 @@
+export const API_URL = "https://social-media-backend-75bp.onrender.com/api"

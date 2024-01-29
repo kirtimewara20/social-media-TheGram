@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import { useLocation } from 'react-router-dom'
+import {API_URL} from "../../config"
 
 export default function ResetPassword() {
   const location = useLocation();
@@ -10,7 +11,7 @@ export default function ResetPassword() {
   console.log(password);
   const handleClick = async(e)=>{
     e.preventDefault();
-    await fetch(`/auth/reset/password?${code}` , {method:"PUT" , headers:{'Content-Type':"application/JSON"} , body:JSON.stringify({password:password})}).then((data)=>{
+    await fetch(`${API_URL}/auth/reset/password?${code}` , {method:"PUT" , headers:{'Content-Type':"application/JSON"} , body:JSON.stringify({password:password})}).then((data)=>{
       alert("Your password rest successfully")
     })
   };

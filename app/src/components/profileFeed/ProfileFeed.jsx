@@ -6,6 +6,7 @@ import { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import { useParams } from "react-router";
 import {AuthContext} from "../../context/AuthContext";
+import {API_URL} from "../../config"
 
 export default function ProfileFeed(){
 
@@ -16,7 +17,7 @@ export default function ProfileFeed(){
     useEffect(()=>{
         const fetchPosts = async () => {
             try{
-                const res = await axios.get("/posts/profile/" + name);
+                const res = await axios.get(`${API_URL}/posts/profile/` + name);
                 setPosts(res.data.sort((p1, p2) => {
                     return new Date(p2.createdAt) - new Date(p1.createdAt);
                 }));

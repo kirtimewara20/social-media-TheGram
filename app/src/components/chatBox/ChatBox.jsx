@@ -3,6 +3,7 @@ import Message from "../../components/chatBox/Message";
 import InputEmoji from "react-input-emoji";
 import {useRef, useState, useEffect } from "react";
 import axios from "axios";
+import {API_URL} from "../../config"
 
 export default function ChatBox({conversation, currentUser, setSendMessage, receivedMessage}) {
     const [user, setUser] = useState (null);
@@ -17,7 +18,7 @@ export default function ChatBox({conversation, currentUser, setSendMessage, rece
     
         const getUser = async () => {
           try {
-            const res = await axios("/users?userId=" + friendId);
+            const res = await axios(`${API_URL}/users?userId=` + friendId);
             console.log(res)
             setUser(res.data);
           } catch (err) {
@@ -31,7 +32,7 @@ export default function ChatBox({conversation, currentUser, setSendMessage, rece
     useEffect(() => {
         const getMessages = async () => {
             try {
-                const res = await axios.get("/messages/"+conversation?._id);
+                const res = await axios.get(`${API_URL}/messages/`+conversation?._id);
                 setMessages(res.data);
             } catch (err) {
                 console.log(err);
@@ -63,7 +64,7 @@ export default function ChatBox({conversation, currentUser, setSendMessage, rece
 
         //send msg to database
         try {
-            const res = await axios.post("/messages", message);
+            const res = await axios.post(`${API_URL}/messages`, message);
             setMessages([...messages, res.data]);
             setNewMessage("");
         } catch (err) {
