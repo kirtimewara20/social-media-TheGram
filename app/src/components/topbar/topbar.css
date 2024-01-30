@@ -102,8 +102,8 @@
 }
 
 .topbarImg{
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     object-fit: cover;
     cursor: pointer;
@@ -113,4 +113,6 @@
     font-weight: bold;
     color: white;
     margin-left: 10px;
+    font-size: 20px;
 }
+

@@ -48,9 +48,9 @@ export default function Topbar() {
                     </div>
                 </div>
                 <div className="topbarProfile">
-                    <img src={user && user.profilePicture ? PF + user.profilePicture : PF+"Person/NoProfileImg.png"} alt="" className="topbarImg" />
-                    <Link to={user ? `/profile/${user.name}` : '/'} style={{textDecoration:"none", marginTop:"8px"}}>
-                        <span className="topbarUsername">{user ? user.name : 'user'}</span>
+                    <Link to={user ? `/profile/${user.name}` : '/'} style={{textDecoration:"none"}}>
+                        <img src={user && user.profilePicture ? PF + user.profilePicture : PF+"Person/NoProfileImg.png"} alt="" className="topbarImg" />
+                        <span className="topbarUsername" >{user ? user.name : 'user'}</span>
                     </Link>
                 </div>
             </div>

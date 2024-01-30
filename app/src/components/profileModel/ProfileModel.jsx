@@ -47,7 +47,8 @@ export default function ProfileModal({modalOpened, setModalOpened, data}) {
       const res = await axios.put(`${API_URL}/users/` + user._id, updatedUser);
       setSuccess(true);
       dispatch({ type: "UPDATE_SUCCESS", payload: res.data });
-      window.location.replace(`${API_URL}/profile/${user.name}`);
+      window.location.reload();
+      //window.location.replace(`/profile/${user.name}`);
     } catch (err) {
       dispatch({ type: "UPDATE_FAILURE" });
     }

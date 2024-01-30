@@ -63,6 +63,7 @@ export default function Post({ post}) {
         try{
             axios.post(`${API_URL}/posts/${post?._id}/comment`, comment);
             setComments(Comments.concat(comment));
+            window.location.reload();
         } catch(err) {
             console.error("Error adding comment:", err);
         }

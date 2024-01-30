@@ -42,7 +42,7 @@ export default function ProfileCard({posts}) {
           dispatch({type: "FOLLOW", payload: user._id});    
         }
         setFollowed(!followed);
-        window.location.reload(false)
+        window.location.reload()
       } catch (err) {
           console.error('Error following/unfollowing user:', err);
       }

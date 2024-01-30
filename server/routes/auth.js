@@ -76,7 +76,7 @@ router.post("/forgot/password" , async(req , res)=>{
       from:"sociaMedia@gmail.com",
       to:user.email,
       subject:"Reset Token",
-      html:`http://localhost:3000/reset/password?token=${RandomTxt}&_id=${user._id}`
+      html:`https://frontend-27lh.onrender.com/reset/password?token=${RandomTxt}&_id=${user._id}`
     })
 
     return res.status(200).json("Check your email to reset password")

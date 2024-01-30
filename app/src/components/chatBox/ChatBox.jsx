@@ -19,7 +19,6 @@ export default function ChatBox({conversation, currentUser, setSendMessage, rece
         const getUser = async () => {
           try {
             const res = await axios(`${API_URL}/users?userId=` + friendId);
-            console.log(res)
             setUser(res.data);
           } catch (err) {
             console.log(err);
