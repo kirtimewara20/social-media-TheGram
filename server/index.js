@@ -62,7 +62,7 @@ app.use("/api/messages", messageRoute);
 
 app.use(express.static(path.join(__dirname, "/app")));
 
-app.get('*', (res, req) => {
+app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '/app/build', 'index.html' ));
 })
 
