@@ -20,8 +20,8 @@ dotenv.config();
 mongoose.connect(process.env.MONGODB_URL)
     .then(()=>{
         console.log("DB connection successful")})
-    .catch(()=>{
-        console.log("Some error occured")
+    .catch((err)=>{
+        console.log("DB connection error:", err)
     });
 
     app.use("/images", express.static(path.join(__dirname, "public/images")));
